@@ -1,0 +1,134 @@
+﻿@model List<CaixaRHWeb.Models.PreGestorModel>
+@{
+    ViewBag.Title = "Avalião Gestor";
+}
+
+<link href="~/Content/bootstrap-select.css" rel="stylesheet" />
+<link href="~/Content/Fornecedor.css" rel="stylesheet" />
+<style>
+    .dialogo > .modal-dialog {
+        width: 700px !important;
+    }
+
+    .modal-body {
+        height: 550px;
+        overflow-y: scroll;
+    }
+</style>
+
+<section id="cadastro_cabecalho">
+    <h1>Avalião Gestor</h1>
+</section>
+
+<div class="row" style="margin-top: 15px">
+    <div class="col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">Preguntas</div>
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <div class="form">
+
+                                        <h5>@item.NomePergunta</h5>
+                                        <div>
+                                            <label class="checkbox-inline radioB">
+                                                <input type="radio" />
+                                                @item.NomeResposta
+                                            </label>
+                                        </div>
+
+                                        <div>
+                                            <label class="checkbox-inline radioB">
+                                                <input type="radio" />
+                                                @item.NomeResposta2
+                                            </label>
+                                        </div>
+
+                                        <div>
+                                            <label class="checkbox-inline radioB">
+                                                <input type="radio" />
+                                                @item.NomeResposta3
+                                            </label>
+                                        </div>
+
+                                        <div>
+                                            <label class="checkbox-inline radioB">
+                                                <input type="radio" />
+                                                @item.NomeResposta4
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                            @*<tr>
+                                                    <th><h5>@item.NomePergunta</h5></th>
+                                                </tr
+                                                    <tr>
+                                                        <th colspan="4" ><label class="checkbox-inline radioB">
+                                                                <input type="radio" />
+                                                                @item.NomeResposta
+                                                            </label>
+                                                            <label class="checkbox-inline radioB">
+                                                                <input type="radio" />
+                                                                @item.NomeResposta2
+                                                            </label>
+
+                                                            <label class="checkbox-inline radioB">
+                                                                <input type="radio" />
+                                                                @item.NomeResposta3
+                                                            </label>
+                                                            <label class="checkbox-inline radioB">
+                                                                    <input type="radio" />
+                                                                    @item.NomeResposta4
+                                                                </label>
+                                                         </th>
+                                                    </tr>*@
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        @Html.Label("txt_logradouro", "Nota", new { @class = "control-label" })
+                        @Html.TextBox("txt_logradouro", null, new { @class = "form-control" })
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.Label("ddl_pais", "Opcional", new { @class = "control-label" })
+                        @Html.DropDownList("ddl_pais", new SelectList(""), new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+<script id="template-grid" type="x-tmpl-mustache">
+    <tr data-id="{{ Id }}">
+        <td>{{ Nome }}</td>
+        <td>{{ Telefone }}</td>
+        <td>{{ Contato }}</td>
+        <td>{{ #Ativo }}SIM{{ /Ativo }}{{ ^Ativo }}NÃO{{ /Ativo }}</td>
+        <td>
+            <a class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</a>
+            <a class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i> Excluir</a>
+        </td>
+    </tr>
+</script>
+<script src="~/Scripts/Fornecedor.js"></script>

@@ -1,0 +1,201 @@
+﻿header#navbar, .navbar-header {
+    background-color: #FFF !important;
+    width: 100%;
+}
+
+.navbar-brand {
+    height: 40px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.jumbotron {
+    padding: 2px;
+    color: #FFF;
+}
+
+    .jumbotron.bg-mint, .jumbotron.bg-purple, .jumbotron.bg-primary, .jumbotron.bg-trans-dark {
+        margin-bottom: 0;
+    }
+
+        .jumbotron.bg-mint h3, .jumbotron.bg-purple h3, .jumbotron.bg-primary h3 {
+            color: #FFF;
+            margin-bottom: 0;
+        }
+
+.panel-colorful .h4 {
+    color: #FFF;
+}
+
+#content-container {
+    padding-top: 70px;
+}
+
+.breadcrumb {
+    font-size: 16px;
+    padding: 0px !important;
+}
+
+.ibtn.btn {
+    margin: 4px 4px 4px 0;
+}
+
+h3.version {
+    float: right;
+    font-size: 1em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+/*adaptando ao modelo mobile*/
+@media(max-width:768px) {
+    .input-group-addon, .input-group-btn, .input-group .form-control {
+        display: block;
+        margin-bottom: 10px;
+        clear: both;
+    }
+
+    .input-group-addon {
+        width: 100%;
+    }
+
+        .input-group-addon:first-child {
+            border-right-style: solid;
+            border-right-width: 1px;
+        }
+
+    .input-group {
+        display: block;
+        text-align: center;
+    }
+
+        .input-group .btn {
+            min-width: 40%;
+        }
+    /* < DATATABLES ***********************************/
+
+    div.dataTables_wrapper div.dataTables_filter input {
+        display: block !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        margin-top: 0.5em !important;
+    }
+
+    table.dataTable.nowrap th, table.dataTable.nowrap td {
+        white-space: normal !important;
+    }
+
+    div.dataTables_wrapper div.dataTables_filter label {
+        width: 100% !important;
+    }
+    /* </ DATATABLES **********************************/
+}
+
+/* < DATATABLES ***********************************/
+table.dataTable > tbody > tr.child span.dtr-title {
+    display: block !important;
+}
+
+table.dataTable > tbody > tr.child ul {
+    width: 100% !important;
+}
+
+div.dt-buttons .btn {
+    margin-bottom: 0.5em;
+}
+
+.label-success {
+    background-color: #00b9b0 !important;
+}
+
+.label-info {
+    background-color: #109dd9;
+}
+
+.label-warning {
+    background-color: #ff6d00 !important;
+}
+
+.label-purple {
+    background-color: #7551a1 !important;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+    background-color: rgb(230, 90,0) !important;
+}
+
+/* </ DATATABLES **********************************/
+
+
+
+/* < BOOTSTRAP*******************************/
+
+/*# MODAL*/
+.bootstrap-dialog.type-success .modal-header {
+    background-color: rgb(91,196,191);
+}
+
+.bootstrap-dialog.type-warning .modal-header {
+    background-color: rgb(250,171,86);
+}
+
+.bootstrap-dialog.type-danger .modal-header {
+    background-color: rgb(250,171,86);
+}
+
+/*# Validations*/
+.has-error .checkbox,
+.has-error .checkbox-inline,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .radio,
+.has-error .radio-inline,
+.has-error.checkbox label,
+.has-error.checkbox-inline label,
+.has-error.radio label,
+.has-error.radio-inline label,
+.has-error .form-control-feedback {
+    color: rgb(250,171,86) !important;
+}
+
+.has-success .checkbox,
+.has-success .checkbox-inline,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .radio,
+.has-success .radio-inline,
+.has-success.checkbox label,
+.has-success.checkbox-inline label,
+.has-success.radio label,
+.has-success.radio-inline label,
+.has-success .form-control-feedback {
+    color: rgb(91,196,191) !important;
+}
+
+.has-success .form-control:focus,
+.has-success .form-control {
+    border-color: rgb(91,196,191);
+}
+
+.has-error .form-control:focus,
+.has-error .form-control {
+    border-color: rgb(250,171,86) !important;
+}
+
+.has-error .input-group-addon {
+    color: rgb(250,171,86) !important;
+    background-color: #FFF !important;
+    border-color: rgb(250,171,86) !important;
+}
+
+
+.has-success .input-group-addon {
+    color: rgb(91,196,191) !important;
+    background-color: #FFF !important;
+    border-color: rgb(91,196,191) !important;
+}
+
+
+/*</ BOOTSTRAP******************************/
+
