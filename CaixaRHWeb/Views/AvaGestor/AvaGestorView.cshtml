@@ -1,4 +1,5 @@
 ﻿@model List<CaixaRHWeb.Models.PreGestorModel>
+
 @{
     ViewBag.Title = "Avalião Gestor";
 }
@@ -23,7 +24,7 @@
 <div class="row" style="margin-top: 15px">
     <div class="col-md-12">
         <div class="panel panel-info">
-            <div class="panel-heading">Preguntas</div>
+            <div class="panel-heading">Perguntas</div>
             <div class="panel-body">
 
                 <div class="row">
@@ -37,82 +38,56 @@
                                 {
                                     <div class="form">
 
-                                        <h5>@item.NomePergunta</h5>
-                                        <div>
-                                            <label class="checkbox-inline radioB">
-                                                <input type="radio" />
-                                                @item.NomeResposta
-                                            </label>
-                                        </div>
+                                        @if (@item.Ativo == true && @item.NomeResposta != null)
+                                        {
+                                            <h5>@item.NomePergunta:</h5>
+                                                <div>
+                                                    <label>
+                                                        @if (@item.NomeResposta != null)
+                                                        {@Html.RadioButton("nres", item.NomeResposta) <span> @item.NomeResposta </span><br>
+                                                        }
 
-                                        <div>
-                                            <label class="checkbox-inline radioB">
-                                                <input type="radio" />
-                                                @item.NomeResposta2
-                                            </label>
-                                        </div>
+                                                        @if (@item.NomeResposta2 != null)
+                                                        {@Html.RadioButton("nres", item.NomeResposta2) <span> @item.NomeResposta2 </span><br>
+                                                        }
 
-                                        <div>
-                                            <label class="checkbox-inline radioB">
-                                                <input type="radio" />
-                                                @item.NomeResposta3
-                                            </label>
-                                        </div>
+                                                        @if (@item.NomeResposta3 != null)
+                                                        {@Html.RadioButton("nres", item.NomeResposta3) <span> @item.NomeResposta3 </span><br>
+                                                        }
 
-                                        <div>
-                                            <label class="checkbox-inline radioB">
-                                                <input type="radio" />
-                                                @item.NomeResposta4
-                                            </label>
-                                        </div>
+                                                        @if (@item.NomeResposta4 != null)
+                                                        {@Html.RadioButton("nres", item.NomeResposta4) <span> @item.NomeResposta4 </span><br>
+                                                        }
+                                                    </label>
+                                                </div>
+                                            <br>
+                                        }
                                     </div>
-
-
-                                            @*<tr>
-                                                    <th><h5>@item.NomePergunta</h5></th>
-                                                </tr
-                                                    <tr>
-                                                        <th colspan="4" ><label class="checkbox-inline radioB">
-                                                                <input type="radio" />
-                                                                @item.NomeResposta
-                                                            </label>
-                                                            <label class="checkbox-inline radioB">
-                                                                <input type="radio" />
-                                                                @item.NomeResposta2
-                                                            </label>
-
-                                                            <label class="checkbox-inline radioB">
-                                                                <input type="radio" />
-                                                                @item.NomeResposta3
-                                                            </label>
-                                                            <label class="checkbox-inline radioB">
-                                                                    <input type="radio" />
-                                                                    @item.NomeResposta4
-                                                                </label>
-                                                         </th>
-                                                    </tr>*@
-
                                 }
                             </tbody>
+
                         </table>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-9">
-                        @Html.Label("txt_logradouro", "Nota", new { @class = "control-label" })
-                        @Html.TextBox("txt_logradouro", null, new { @class = "form-control" })
+                        @Html.Label("txt_observacao", "Observação: ", new { @class = "control-label" })
+                        @Html.TextArea("txt_observacao", null, new { @class = "form-control" })
                     </div>
-
                 </div>
+
+                <br />
 
                 <div class="row">
-                    <div class="col-md-12">
-                        @Html.Label("ddl_pais", "Opcional", new { @class = "control-label" })
-                        @Html.DropDownList("ddl_pais", new SelectList(""), new { @class = "form-control" })
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="card">
+                            <div class="card-body">    
+                                <a class="btn btn-primary btn-success" role="button"><i class="glyphicon glyphicon-send"></i> Enviar</a>
+                            </div>
+                        </div>                        
                     </div>
-                </div>
-            </div>
+                </div>               
         </div>
     </div>
 </div>

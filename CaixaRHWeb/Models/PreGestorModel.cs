@@ -12,7 +12,6 @@ namespace CaixaRHWeb.Models
 
         [Required(ErrorMessage = "Preencha o nome.")]
         public string NomePergunta { get; set; }
-
         public string NomeResposta { get; set; }
 
         public string NomeResposta2 { get; set; }

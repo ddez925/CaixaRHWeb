@@ -3,12 +3,14 @@
     ViewBag.Title = "Perguntas Gestor";
 }
 <style>
-    #grid_cadastro > thead > tr th:nth-child(2) {
+     #grid_cadastro > thead > tr th:nth-child(2) {
         width: 110px;
+        align-content: center;
     }
 
-    #grid_cadastro > thead > tr th:nth-child(3) {
+    #grid_cadastro > thead > tr th:nth-child(4) {
         width: 200px;
+        align-content: center;
     }
 
     #cadastro {
@@ -44,7 +46,7 @@
                     <thead>
                         <tr>
                             <th align="center">Pergunta</th>
-                            <th colspan="4">Respostas</th>
+                            <th align="center" colspan="4">Respostas</th>
                             <th>Ativo</th>
                             <th>Ação</th>
                         </tr>
@@ -64,7 +66,7 @@
                                     <a class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i> Excluir</a>
                                 </td>
                             </tr>
-                                    }
+                          }
                     </tbody>
                 </table>
             </div>
@@ -77,41 +79,41 @@
     <fieldset>
         <div class="row">
             <div class="form-group">
-                @Html.Label("txt_nomePergunta", "Pergunta", new { @class = "col-md-3 control-label" })
+                @Html.Label("txt_nomePergunta", "Pergunta:", new { @class = "col-md-3 control-label" })
                 <div class="col-md-12">
-                    @Html.TextBox("txt_nomePergunta", null, new { @class = "form-control" })
+                    @Html.TextArea("txt_nomePergunta", null, new { @class = "form-control" })
                 </div>
             </div>
 
             <div class="form-group">
-                @Html.Label("txt_nomeResposta", "Resposta", new { @class = "col-md-3 control-label" })
+                @Html.Label("txt_nomeResposta", "Resposta:", new { @class = "col-md-3 control-label" })
                 <div class="col-md-12">
                     @Html.TextBox("txt_nomeResposta", null, new { @class = "form-control" })
                 </div>
             </div>
 
             <div class="form-group">
-                @Html.Label("txt_nomeResposta2", "Resposta 2", new { @class = "col-md-3 control-label" })
+                @Html.Label("txt_nomeResposta2", "Resposta 2:", new { @class = "col-md-3 control-label" })
                 <div class="col-md-12">
                     @Html.TextBox("txt_nomeResposta2", null, new { @class = "form-control" })
                 </div>
             </div>
 
             <div class="form-group">
-                @Html.Label("txt_nomeResposta3", "Resposta 3", new { @class = "col-md-3 control-label" })
+                @Html.Label("txt_nomeResposta3", "Resposta 3:", new { @class = "col-md-3 control-label" })
                 <div class="col-md-12">
                     @Html.TextBox("txt_nomeResposta3", null, new { @class = "form-control" })
                 </div>
             </div>
 
             <div class="form-group">
-                @Html.Label("txt_nomeResposta4", "Resposta 4", new { @class = "col-md-3 control-label" })
+                @Html.Label("txt_nomeResposta4", "Resposta 4:", new { @class = "col-md-3 control-label" })
                 <div class="col-md-12">
                     @Html.TextBox("txt_nomeResposta4", null, new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
-                @Html.Label("cbx_ativo", "Ativo", new { @class = "col-md-3 control-label" })
+                @Html.Label("cbx_ativo", "Ativo:", new { @class = "col-md-3 control-label" })
                 <div class="col-md-12">
                     @Html.CheckBox("cbx_ativo")
                 </div>
