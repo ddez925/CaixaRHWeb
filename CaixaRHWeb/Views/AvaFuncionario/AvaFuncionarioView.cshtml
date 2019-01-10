@@ -44,19 +44,19 @@
                                                 <div>
                                                     <label>
                                                         @if (@item.NomeResposta != null)
-                                                        {@Html.RadioButton("nres", item.NomeResposta) <span> @item.NomeResposta </span><br>
+                                                        {@Html.RadioButton(item.Id.ToString(), item.NomeResposta) <span> @item.NomeResposta </span><br>
                                                         }
 
                                                         @if (@item.NomeResposta2 != null)
-                                                        {@Html.RadioButton("nres", item.NomeResposta2) <span> @item.NomeResposta2 </span><br>
+                                                        {@Html.RadioButton(item.Id.ToString(), item.NomeResposta2) <span> @item.NomeResposta2 </span><br>
                                                         }
 
                                                         @if (@item.NomeResposta3 != null)
-                                                        {@Html.RadioButton("nres", item.NomeResposta3) <span> @item.NomeResposta3 </span><br>
+                                                        {@Html.RadioButton(item.Id.ToString(), item.NomeResposta3) <span> @item.NomeResposta3 </span><br>
                                                         }
 
                                                         @if (@item.NomeResposta4 != null)
-                                                        {@Html.RadioButton("nres", item.NomeResposta4) <span> @item.NomeResposta4 </span><br>
+                                                        {@Html.RadioButton(item.Id.ToString(), item.NomeResposta4) <span> @item.NomeResposta4 </span><br>
                                                         }
                                                     </label>
                                                 </div>
